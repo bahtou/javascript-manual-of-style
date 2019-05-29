@@ -1,0 +1,84 @@
+{
+  "extends": "./index.js",
+}
+
+// add rule to order import statements based on file type &&|| folder/file names alphabetically
+//
+// --EXAMPLE--
+// import React from 'react';
+// import { bool, object } from 'prop-types';
+// import CSS from './styles.css';
+
+// import Spinner from 'Shared/Spinner';
+// import Notifications from 'Shared/Notifications';
+// import Bookmark from 'Components/Bookmark';
+// import RightSidePanel from 'Components/RightSidePanel';
+// import Annotation from 'Components/Annotation';
+// import FAB from 'Components/FAB';
+// import Navigation from 'Components/Navigation';
+// import VSReader from 'Components/VSReader';
+//
+// --RESULTS --
+// import React from 'react';
+// import { bool, object } from 'prop-types';
+// <SPACED-added>
+// import Annotation from 'Components/Annotation';
+// import Bookmark from 'Components/Bookmark';
+// import FAB from 'Components/FAB';
+// import Navigation from 'Components/Navigation';
+// import RightSidePanel from 'Components/RightSidePanel';
+// import VSReader from 'Components/VSReader';
+// import Notifications from 'Shared/Notifications';
+// import Spinner from 'Shared/Spinner';
+// <SPACED-added>
+// import CSS from './styles.css';
+
+// add rule to distinguish between 'node_module' import vs 'src' import
+//
+// --EXAMPLE--
+// import React, { Component } from 'react';
+// import { string, func, bool } from 'prop-types';
+// import { connect } from 'react-redux';
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+//
+// --RESULTS --
+// import React, { Component } from 'react';
+// import { string, func, bool } from 'prop-types';
+// import { connect } from 'react-redux';
+// <SPACE-added>
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+// <SPACE-added>
+
+
+// add rule to add space bettern imported libraries & code constructs
+//
+// --EXAMPLE--
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+// class PageSelector extends Component { ...
+//
+// --RESULTS --
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+// import { goToPage, notifications, SET_PAGE_BREAK_ERROR } from 'PipeRouter';
+// import PageSelectorViews from './views';
+// <SPACE-added>
+// <SPACE-added>
+// class PageSelector extends Component { ...
+
+
+// add rule to add space above/below 'export' statements
+//
+// --EXAMPLE--
+// function mapStateToProps(state) {}
+// export default connect(mapStateToProps, { goToPage, notifications })(PageSelector);
+//
+// --RESULTS --
+// function mapStateToProps(state) {}
+// <SPACE-added>
+// <SPACE-added>
+// export default connect(mapStateToProps, { goToPage, notifications })(PageSelector);
