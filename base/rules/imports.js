@@ -205,13 +205,13 @@ module.exports = {
 
     // This rule enforces that all exports are declared at the bottom of the file.
     // https://github.com/benmosher/eslint-plugin-import/blob/98acd6afd04dcb6920b81330114e146dc8532ea4/docs/rules/exports-last.md
-    'import/exports-last': 2,
+    'import/exports-last': 0,
 
     // Reports when named exports are not grouped together in a single export declaration
     // or when multiple assignments to CommonJS module.exports or exports object are present
     // in a single file.
     // https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/group-exports.md
-    'import/group-exports': 2,
+    'import/group-exports': 0,
 
     // forbid default exports. this is a terrible rule, do not use it.
     // https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-default-export.md

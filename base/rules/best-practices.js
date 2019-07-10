@@ -22,7 +22,7 @@ module.exports = {
 
     // specify the maximum cyclomatic complexity allowed in a program
     complexity: [1, {
-      max: 2
+      max: 20
     }],
 
     // enforce that class methods use "this"

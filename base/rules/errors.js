@@ -31,7 +31,7 @@ module.exports = {
     'no-cond-assign': [0, 'always'],
 
     // disallow use of console
-    'no-console': [2, {
+    'no-console': [1, {
       allow: ['warn', 'error']
     }],
 

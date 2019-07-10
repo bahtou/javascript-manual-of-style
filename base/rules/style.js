@@ -1,4 +1,4 @@
-// 0 or 0 - turn the rule off
+// 'off' or 0 - turn the rule off
 // 'warn' or 1 - turn the rule on as a warning (does not affect exit code)
 // 'error' or 2 - turn the rule on as an error (exit code will be 1)
 
@@ -123,8 +123,8 @@ module.exports = {
     // this option enforces minimum and maximum identifier lengths
     // (variable names, property names etc.)
     'id-length': [2, {
-      min: 3,
-      exceptions: ['i', 'j', 'k', 'js']
+      min: 2,
+      exceptions: ['i', 'j', 'k', 'x', 'y', 'z']
     }],
 
     // require identifiers to match the provided regular expression
@@ -231,7 +231,7 @@ module.exports = {
     // specify the maximum length of a line in your program
     // https://eslint.org/docs/rules/max-len
     'max-len': [2, {
-      code: 113,
+      code: 180,
       tabWidth: 2,
       comments: 113,
       ignorePattern: '',
@@ -254,7 +254,7 @@ module.exports = {
     // enforce a maximum function length
     // https://eslint.org/docs/rules/max-lines-per-function
     'max-lines-per-function': [1, {
-      max: 50,
+      max: 80,
       skipBlankLines: true,
       skipComments: true,
       IIFEs: true
@@ -442,9 +442,9 @@ module.exports = {
     // enforce line breaks between braces
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': [2, {
-      ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
-      ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
-      ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+      ObjectExpression: { minProperties: 5, multiline: true, consistent: true },
+      ObjectPattern: { minProperties: 7, multiline: false, consistent: true },
+      ImportDeclaration: { minProperties: 5, multiline: true, consistent: true },
       ExportDeclaration: { minProperties: 4, multiline: true, consistent: true }
     }],
 
@@ -487,11 +487,11 @@ module.exports = {
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
     'padding-line-between-statements': [2, {
-      blankLine: 'always',
+      blankLine: 'any',
       prev: '*',
       next: 'return'
     }, {
-      blankLine: 'always',
+      blankLine: 'any',
       prev: ['const', 'let', 'var'],
       next: '*'
     }, {
@@ -563,7 +563,7 @@ module.exports = {
     'space-in-parens': [2, 'never'],
 
     // require spaces around operators
-    'space-infix-ops': 2,
+    'space-infix-ops': 1,
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops

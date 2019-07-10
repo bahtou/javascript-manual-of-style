@@ -1,21 +1,28 @@
 {
-  "name": "codeStyle",
-  "version": "1.0.0",
-  "description": "",
+  "name": "eslint-config-jsmos",
+  "version": "0.1.0",
+  "description": "JavaScript Manual of Style",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "javascript manual of style",
+    "jsmos",
+    "eslint"
+  ],
+  "author": "bahtou",
+  "license": "MIT",
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.7"
+  },
   "devDependencies": {
-    "confusing-browser-globals": "^1.0.7",
-    "eslint": "^5.16.0",
-    "eslint-plugin-import": "^2.17.3"
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-import": "^2.17.3"
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0"
   }
 }
