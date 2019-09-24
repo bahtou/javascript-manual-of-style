@@ -15,12 +15,8 @@ module.exports = {
     './base/rules/variables'
   ].map(require.resolve),
   env: {
-    browser: true,
-    commonjs: true,
-    'shared-node-browser': true,
-    serviceworker: true,
     node: true,
-    worker: true
+    amd: true
   },
   globals: {
     __dirname: 'readonly',
@@ -29,21 +25,17 @@ module.exports = {
     Promise: 'readonly',
     require: 'readonly',
     Symbol: 'readonly',
-    _require: 'writable',
-    logger: 'writable',
-    Logger: 'writable'
+    window: 'readonly'
   },
   parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
     ecmaFeatures: {
       globalReturn: false,
       impliedStrict: true,
       jsx: true
-    },
-    ecmaVersion: 2019,
-    sourceType: 'module'
+    }
   },
-  parser: 'babel-eslint',
-  rules: {
-    strict: [2, 'safe']
-  }
+  parser: 'esprima',
+  rules: {}
 };

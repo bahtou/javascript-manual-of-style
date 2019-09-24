@@ -8,49 +8,49 @@ const confusingBrowserGlobals = require('confusing-browser-globals');
 module.exports = {
   rules: {
     // enforce or disallow variable initializations at definition
-    'init-declarations': 1,
+    'init-declarations': 'warn',
 
     // disallow the catch clause parameter name being the same as a variable in the outer scope
-    'no-catch-shadow': 1,
+    'no-catch-shadow': 'warn',
 
     // disallow deletion of variables
-    'no-delete-var': 2,
+    'no-delete-var': 'error',
 
     // disallow labels that share a name with a variable
     // https://eslint.org/docs/rules/no-label-var
-    'no-label-var': 2,
+    'no-label-var': 'error',
 
     // disallow specific globals
-    'no-restricted-globals': [2, 'isFinite', 'isNaN'].concat(confusingBrowserGlobals),
+    'no-restricted-globals': ['error', 'isFinite', 'isNaN'].concat(confusingBrowserGlobals),
 
     // disallow declaration of variables already declared in the outer scope
-    'no-shadow': 2,
+    'no-shadow': 'error',
 
     // disallow shadowing of names such as arguments
-    'no-shadow-restricted-names': 2,
+    'no-shadow-restricted-names': 'error',
 
     // disallow use of undeclared variables unless mentioned in a /*global */ block
-    'no-undef': 2,
+    'no-undef': 'error',
 
     // disallow use of undefined when initializing variables
-    'no-undef-init': 2,
+    'no-undef-init': 'error',
 
     // disallow use of undefined variable
     // https://eslint.org/docs/rules/no-undefined
-    'no-undefined': 2,
+    'no-undefined': 'error',
 
     // disallow declaration of variables that are not used in the code
-    'no-unused-vars': [2, {
+    'no-unused-vars': ['error', {
       vars: 'all',
       args: 'after-used',
       ignoreRestSiblings: true
     }],
 
     // disallow use of variables before they are defined
-    'no-use-before-define': [2, {
+    'no-use-before-define': ['error', {
       functions: true,
       classes: true,
       variables: true
-    }],
+    }]
   }
 };
