@@ -5,14 +5,14 @@
 
 module.exports = {
   extends: [
-    './base/rules/best-practices',
-    './base/rules/errors',
-    './base/rules/es6',
-    './base/rules/imports',
-    './base/rules/node',
-    './base/rules/strict',
-    './base/rules/style',
-    './base/rules/variables'
+    './rules/best-practices',
+    './rules/errors',
+    './rules/es6',
+    './rules/imports',
+    './rules/node',
+    './rules/strict',
+    './rules/style',
+    './rules/variables'
   ].map(require.resolve),
   env: {
     node: true,
