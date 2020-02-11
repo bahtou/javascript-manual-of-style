@@ -25,7 +25,8 @@ module.exports = {
     Promise: 'readonly',
     require: 'readonly',
     Symbol: 'readonly',
-    window: 'readonly'
+    window: 'readonly',
+    document: 'readonly'
   },
   parserOptions: {
     ecmaVersion: 2020,
